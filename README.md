@@ -4,4 +4,4 @@ Welcome to the work day schedule! This planner is made for your busy work day sc
 
 ## Screen shot of the page
 
-![image] (assets\calander.png)
+[image] (assets\calander.png)
