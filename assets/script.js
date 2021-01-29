@@ -7,7 +7,7 @@ $("#currentDay").text(todaysDate)
 //adds the date to #currentTime id
 $("#currentTime").text(todaysTime);
 
-var future = { "background-color": "#ebfafa", "color": "black" }
+var future = { "background-color": "grey", "color": "black", }
 
 //function setTime() {
 // Sets interval in variable
@@ -22,7 +22,7 @@ var future = { "background-color": "#ebfafa", "color": "black" }
 
 var container = $(".container");
 //an array for the time 
-var times = ["9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm"];
+var times = ["9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm"];
 
 
 //for loop to add divs, textarea, and buttons to the page 
@@ -33,9 +33,7 @@ for (let i = 0; i < times.length; i++) {
     var button = $("<button>").addClass("saveBtn col-1").text("SAVE!")
     container.append(row);
     row.append(timeBlock, textArea, button);
-    if (todaysTime > 9) {
-        textArea = future
-    }
+
 
 
 }
@@ -51,6 +49,7 @@ $(".saveBtn").on("click", function () {
 
 
 
+//for loop to add to local storage 
 for (var j = 0; j < times.length; j++) {
     console.log(times[j], localStorage.getItem(times[j]));
     var timesEl = document.getElementById(times[j]); // grabing text area by id 
@@ -58,6 +57,3 @@ for (var j = 0; j < times.length; j++) {
     timesEl.textContent = timesLocal;
 }
 
-
-
-//setTime();
