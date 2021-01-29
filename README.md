@@ -8,4 +8,15 @@ Welcome to the work day schedule! This planner is made for your busy work day sc
 
 ## Here is a link to my page!
 
-[link](file:///C:/Users/josep/Bootcamp/calander/calander/index.html)
+[link](https://jagg1991.github.io/calander/)
+
+## Tech used in development 
+
+- HTML
+- CSS
+- JavaScript
+- JQuery
+- Local Storage
+
+## Contact me!
+Please contact me at with any quesitons or conerns you may have. [](josephguajardo.ymail.com)
