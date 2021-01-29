@@ -19,4 +19,5 @@ Welcome to the work day schedule! This planner is made for your busy work day sc
 - Local Storage
 
 ## Contact me!
-Please contact me at with any quesitons or conerns you may have. [](josephguajardo.ymail.com)
+
+Please contact me at with any quesitons or conerns you may have. [josephguajardo@ymail.com](josephguajardo@ymail.com)
