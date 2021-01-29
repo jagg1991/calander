@@ -4,7 +4,8 @@ Welcome to the work day schedule! This planner is made for your busy work day sc
 
 ## Screen shot of the page!
 
-
+![](assets/calander.png)
 
 ## Here is a link to my page!
-![](assets/calander.png)
+
+file:///C:/Users/josep/Bootcamp/calander/calander/index.html
