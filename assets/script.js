@@ -1,24 +1,11 @@
 //variable for the date
 var todaysDate = moment().format("MMMM DD YYYY");
 //variable for the time 
-var todaysTime = moment().format("h:mm:ss a")
+var todaysTime = moment().format("h:mm a")
 //adds the date to #currentDay id
 $("#currentDay").text(todaysDate)
 //adds the date to #currentTime id
 $("#currentTime").text(todaysTime);
-
-var future = { "background-color": "grey", "color": "black", }
-
-//function setTime() {
-// Sets interval in variable
-//var timeInterval = setInterval(function () {
-// todaysTime++;
-//timeInterval = $("#currentTime").text(todaysTime);
-
-
-
-//}, 1000);
-//}
 
 var container = $(".container");
 //an array for the time 
@@ -39,8 +26,10 @@ for (let i = 0; i < times.length; i++) {
 }
 //funtion for the save button 
 $(".saveBtn").on("click", function () {
-    var textContent = $(this).prev().val(); // associated wiht what ever button was clicked 
-    var timeEl = $(this).prev().prev().text(); // this is going to be a value of time slots for text content 
+    // associated wiht what ever button was clicked 
+    var textContent = $(this).prev().val();
+    // this is going to be a value of time slots for text content 
+    var timeEl = $(this).prev().prev().text();
 
     localStorage.setItem(timeEl, textContent);
 
@@ -52,8 +41,27 @@ $(".saveBtn").on("click", function () {
 //for loop to add to local storage 
 for (var j = 0; j < times.length; j++) {
     console.log(times[j], localStorage.getItem(times[j]));
-    var timesEl = document.getElementById(times[j]); // grabing text area by id 
-    var timesLocal = localStorage.getItem(times[j]); // getting local storage using id 
+    // grabing text area by id 
+    var timesEl = document.getElementById(times[j]);
+    // getting local storage using id
+    var timesLocal = localStorage.getItem(times[j]);
     timesEl.textContent = timesLocal;
 }
 
+function checkTime() {
+    var currentTime = moment().hours()
+    $(".col-10").each(function () {
+        var blockHour = parseInt($(this).text());
+        if (blockHour < currentTime) {
+            $(this).addClass("past");
+        } else if (blockHour === currentTime) {
+            $(this).removeClass("past");
+            $(this).addClass("present");
+        } else {
+            $(this).removeClass("past");
+            $(this).removeClass("present");
+            $(this).addClass("future");
+        }
+    })
+}
+checkTime();
